@@ -3,7 +3,9 @@ import * as Tabs from "@radix-ui/react-tabs";
 
 import styles from  "../styles/Main.module.css";
 import Main from "./main/Main";
-import Sub from "./sub/Sub";
+// import Sub from "./sub/Sub";
+import Sub from 'sub-package-theo-w24/Sub'
+import Table from "@/components/Table";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +27,7 @@ export default function Home() {
 			</Tabs.Content>
 
 			<Tabs.TabsContent className={styles.TabsContent} value={"tab2"}>
-				<Sub />
+				<Sub Table={Table}/>
 			</Tabs.TabsContent>
 
 			<Tabs.Content />

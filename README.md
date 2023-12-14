@@ -1,4 +1,4 @@
-## Problem
+# Problem
 
 - Although Examtime can not be run or used independently, it is essentially a standalone product.
 - There have been multiple instances in which changes in Examtime have caused issues and bugs in Termtime, even though for the most part, they are loosely coupled.
@@ -6,36 +6,36 @@
 - Referring to Termtime and Examtime as their own individual products, each is required to develop and release at different times.
 - The backend code for Semestry is currently very tightly coupled between the two products.  This is in the process of being updated.
 
-## What are we trying to solve with this particular approach?
+# What are we trying to solve with this particular approach?
 
 - There is growing demand for Examtime to have it's own processes, separate from Termtime.  However because they reside in the same repository and under the same package.json, there is very little scope to separate processes across the entire software development cycle.
 - The goal we are looking to achieve can be split into two main points:
   - Allow for the option of either shared or indvidual processes in all aspects of the cycle as mentioned above, especially development, versioning and release.
   - Allow for more streamlined development in Examtime, mainly around enabling changes in Examtime to be iterated on with no impact whatsoever to Termtime.
 
-## What options are out there and why do they or don't they work?
+# What options are out there and why do they or don't they work?
 
 - From a technical standpoint, our issues arise due to an outdated legacy codebase, not testing across the entire frontend plus a build process that seems to struggle to handle changes.
 - Thankfully because of the nature of the application, the features / products are loosely coupled and have statefully separate.
 
-# Monorepo
-  Pros
+## Monorepo
+  ### Pros
   - All features exist under one repository
   - Makes managing dependencies easier
   - Centralised codebase for cross team collaboration, PR reviews,etc
 
-  Cons
+  ### Cons
   - Enforces tight coupling between versions
   - Changes in monorepo package are instantly reflected in host.
   - Not conducive to separate processes for deployment, release, etc between different packages.
   - Introduces complexity in form of external libraries and tooling.  
 
-# Multi repo
-  Pros
+## Multi repo
+  ### Pros
   - Separate repository allows for independence in versioning, dependencies and release.
   - Can be developed in isolation from other packages.
 
-  Cons
+  ### Cons
   - Dependencies can be difficult to manage across multiple repositories.
   - Code sharing becomes more difficult.
   - Multi repo encourages silo'd teams, especially in PR reviews, code styling, design decisions, tech stack, etc.
@@ -44,7 +44,7 @@
 # And so..?
 - The pros and cons are interchangeable, depending on the organisation, teams, management and desired outcome.
 
-## Solution
+# Solution
 
 - Based on the two main problems we are facing and the desired outcome to be achieved as stated above, the solution that fits best is to adopt a multi repo approach.
 - This is mostly due to the loose coupling it offers for the development and release process amongst others.
@@ -66,7 +66,7 @@
   - Bump Main version and release ( with or without other changes to Main).
  
 
-## Conclusion
+# Conclusion
 - Although this solution seems to fit well with requirements, there is much discussion to be had before any firm decisions can be made.
 
 

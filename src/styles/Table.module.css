@@ -1,0 +1,18 @@
+.TableContainer {
+    border: 1px solid red;
+}
+
+.Table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 300px;
+    margin: 30px 0
+}
+
+.Table td {
+    border: 1px solid black
+}
+
+.ButtonContainer {
+    margin-top: 10px
+}

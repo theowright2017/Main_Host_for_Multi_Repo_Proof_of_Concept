@@ -6,6 +6,11 @@
 - Referring to Termtime and Examtime as their own individual products, each is required to develop and release at different times.
 - The backend code for Semestry is currently very tightly coupled between the two products.  This is in the process of being updated.
 
+- Both products use the same backend and database
+- Both currently use the same CI/CD process
+- All code is currently maintained under the same src folder / package.json
+- Each product is developed and maintained by a separate dev team 
+
 # What are we trying to solve with this particular approach?
 
 - There is growing demand for Examtime to have it's own processes, separate from Termtime.  However because they reside in the same repository and under the same package.json, there is very little scope to separate processes across the entire software development cycle.
@@ -66,6 +71,31 @@
   - Bump Main version and release ( with or without other changes to Main).
  
 
+# Built With - Multi Repo
+
+This project is using the following technologies:
+
+
+- Languages
+  - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a>
+- Frameworks
+  - <a href="https://nextjs.org/">Next.js</a>
+  - <a href="https://react.dev/">React</a>
+
+## Experimented With & Discarded - Mono Repo
+
+- Tools
+  - <a href="https://pnpm.io/workspaces">PNPM Workspaces</a>
+  - <a href="https://github.com/changesets/changesets">Changesets</a>
+  - <a href="https://nx.dev/">NX</a>
+  - <a href="https://turbo.build/">Turbo Repo</a>
+  - <a href="https://rushjs.io/">Rush JS</a>
+
+## Other Research
+
+- Disregarded based on current project scope and requirements - **Micro-Frontends**
+ 
+
 # Conclusion
 - Although this solution seems to fit well with requirements, there is much discussion to be had before any firm decisions can be made.
 
@@ -76,9 +106,13 @@ https://github.com/theowright2017/sub-14th
 ###################################################################################
 
 
-## Next Setup
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+  
+
+
+
+
+<!-- GETTING STARTED -->
 
 ## Getting Started
 
@@ -96,25 +130,10 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
